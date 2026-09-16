@@ -1,0 +1,2172 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08142b">
+<meta name="description" content="Inscription aux tests de recrutement de Volleyball - Saison 2026/2027">
+<title>Tests de recrutement Volleyball | Saison 2026/2027</title>
+
+<style>
+:root{
+  --navy:#08142b;
+  --navy2:#102b56;
+  --blue:#2563eb;
+  --blue2:#3b82f6;
+  --orange:#f97316;
+  --orange2:#fb923c;
+  --green:#16a34a;
+  --red:#dc2626;
+  --white:#fff;
+  --ink:#152238;
+  --muted:#667085;
+  --line:#e4e9f1;
+  --surface:#f7f9fc;
+  --success:#eaf8ef;
+  --radius:22px;
+  --shadow:0 24px 70px rgba(3,15,38,.22);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body{
+  min-height:100vh;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%,rgba(249,115,22,.18),transparent 24%),
+    radial-gradient(circle at 90% 90%,rgba(37,99,235,.20),transparent 28%),
+    linear-gradient(145deg,#071127,#0b1a37 48%,#102b56);
+  padding:20px 14px;
+  -webkit-font-smoothing:antialiased;
+}
+
+button,input,select{font:inherit}
+button{border:0}
+a{text-decoration:none}
+
+.container{
+  width:min(1050px,100%);
+  margin:auto;
+}
+
+.card{
+  overflow:hidden;
+  background:rgba(255,255,255,.98);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+
+/* HERO */
+.hero{
+  color:#fff;
+  padding:32px;
+  background:
+    radial-gradient(circle at 90% 15%,rgba(249,115,22,.32),transparent 24%),
+    radial-gradient(circle at 5% 95%,rgba(59,130,246,.25),transparent 30%),
+    linear-gradient(135deg,var(--navy2),#173c75);
+}
+
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-start;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.logo{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  font-size:25px;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  box-shadow:0 12px 24px rgba(249,115,22,.25);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--orange2);
+}
+
+.hero h1{
+  margin-top:18px;
+  font-size:clamp(1.7rem,4vw,2.5rem);
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+
+.hero-description{
+  max-width:680px;
+  margin-top:12px;
+  color:rgba(255,255,255,.75);
+  line-height:1.65;
+}
+
+.season{
+  flex:0 0 auto;
+  padding:12px 15px;
+  border-radius:15px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  text-align:right;
+  font-size:.72rem;
+  font-weight:700;
+  color:#dce8ff;
+}
+
+.season strong{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-size:1rem;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 16px;
+  border-radius:12px;
+  font-weight:800;
+  font-size:.85rem;
+  transition:.2s ease;
+}
+
+.hero-btn:hover{transform:translateY(-1px)}
+
+.hero-btn.primary{
+  background:#fff;
+  color:var(--navy);
+}
+
+.hero-btn.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+}
+
+/* TEST INFO */
+.test-info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  padding:20px 28px;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+
+.info-box{
+  display:flex;
+  align-items:flex-start;
+  gap:11px;
+  padding:14px;
+  border-radius:15px;
+  background:var(--surface);
+  border:1px solid #edf1f5;
+}
+
+.info-icon{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:#eef4ff;
+}
+
+.info-box small{
+  display:block;
+  color:var(--muted);
+  font-size:.72rem;
+  font-weight:700;
+}
+
+.info-box strong{
+  display:block;
+  margin-top:3px;
+  font-size:.88rem;
+}
+
+/* CLUB */
+.club-section{
+  padding:28px;
+  background:#fbfcfe;
+  border-bottom:1px solid var(--line);
+}
+
+.club-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+}
+
+.club-head h2{
+  font-size:1.3rem;
+  letter-spacing:-.02em;
+}
+
+.club-head p{
+  max-width:680px;
+  margin-top:7px;
+  color:var(--muted);
+  line-height:1.6;
+  font-size:.9rem;
+}
+
+.club-badge{
+  padding:9px 12px;
+  border-radius:12px;
+  background:#eef4ff;
+  color:#1952c7;
+  font-size:.75rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.club-points{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.club-point{
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+
+.club-point strong{
+  display:block;
+  font-size:.85rem;
+}
+
+.club-point span{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:.76rem;
+  line-height:1.4;
+}
+
+/* PROGRESS */
+.progress-wrap{
+  padding:18px 28px 20px;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+.progress-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:9px;
+  font-size:.8rem;
+  font-weight:700;
+  color:var(--muted);
+}
+
+.progress{
+  height:8px;
+  overflow:hidden;
+  border-radius:99px;
+  background:#edf1f6;
+}
+
+.progress-bar{
+  width:33.33%;
+  height:100%;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--blue),var(--orange));
+  transition:width .3s ease;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:14px;
+}
+
+.step{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+  color:#98a2b3;
+  font-size:.76rem;
+  font-weight:700;
+}
+
+.step span{
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#eef2f7;
+  color:#7a8798;
+}
+
+.step.active{color:var(--blue)}
+.step.active span{background:#e8f0ff;color:var(--blue)}
+
+.step.done{color:var(--green)}
+.step.done span{background:#eaf8ef;color:var(--green)}
+
+/* FORM */
+.form-area{
+  padding:28px;
+}
+
+.panel{
+  display:none;
+  animation:rise .3s ease;
+}
+
+.panel.active{display:block}
+
+@keyframes rise{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:none}
+}
+
+.panel-head{
+  margin-bottom:22px;
+}
+
+.panel-head h2{
+  font-size:1.3rem;
+  letter-spacing:-.02em;
+}
+
+.panel-head p{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+label{
+  color:#354052;
+  font-size:.84rem;
+  font-weight:800;
+}
+
+.required{color:var(--orange)}
+
+input,select{
+  width:100%;
+  min-height:50px;
+  padding:12px 14px;
+  color:var(--ink);
+  background:var(--surface);
+  border:1.5px solid var(--line);
+  border-radius:14px;
+  outline:none;
+  transition:.2s ease;
+}
+
+input::placeholder{color:#a5afbd}
+
+input:focus,select:focus{
+  border-color:var(--blue2);
+  background:#fff;
+  box-shadow:0 0 0 4px rgba(59,130,246,.1);
+}
+
+input.invalid,select.invalid{
+  border-color:var(--red);
+  box-shadow:0 0 0 4px rgba(220,38,38,.08);
+}
+
+.help{
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.45;
+}
+
+.error{
+  display:none;
+  color:var(--red);
+  font-size:.75rem;
+  font-weight:700;
+}
+
+.has-error .error{display:block}
+
+.choices{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.choice{
+  position:relative;
+}
+
+.choice input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.choice label{
+  min-height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 14px;
+  border:1.5px solid var(--line);
+  border-radius:14px;
+  background:var(--surface);
+  color:#475467;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.choice label:hover{
+  border-color:#b8c7de;
+  transform:translateY(-1px);
+}
+
+.choice input:checked+label{
+  color:#1952c7;
+  background:#eef4ff;
+  border-color:var(--blue);
+  box-shadow:0 7px 16px rgba(37,99,235,.1);
+}
+
+.choice input:checked+label::after{
+  content:"✓";
+  margin-left:auto;
+  font-weight:900;
+}
+
+.conditional{
+  display:none;
+  margin-top:3px;
+}
+
+.conditional.show{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.actions{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+}
+
+.btn{
+  min-height:50px;
+  padding:0 19px;
+  border-radius:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  cursor:pointer;
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.btn:hover{transform:translateY(-1px)}
+
+.btn.secondary{
+  color:#4b5565;
+  background:#f1f4f8;
+}
+
+.btn.primary{
+  color:#fff;
+  background:linear-gradient(135deg,var(--blue),#1d4ed8);
+  box-shadow:0 12px 24px rgba(37,99,235,.2);
+}
+
+.btn.submit{
+  color:#fff;
+  background:linear-gradient(135deg,var(--orange),#ea580c);
+  box-shadow:0 12px 24px rgba(249,115,22,.2);
+}
+
+.btn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.note{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin-top:18px;
+  padding:12px 13px;
+  border-radius:13px;
+  background:#f8fafc;
+  color:#596579;
+  font-size:.76rem;
+  line-height:1.5;
+}
+
+/* SUCCESS */
+.success{
+  display:none;
+  padding:42px 24px 46px;
+  text-align:center;
+}
+
+.success.active{
+  display:block;
+  animation:rise .3s ease;
+}
+
+.success-icon{
+  width:82px;
+  height:82px;
+  margin:0 auto 18px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:2rem;
+  background:linear-gradient(135deg,var(--green),#22c55e);
+  box-shadow:0 14px 30px rgba(22,163,74,.23);
+}
+
+.success h2{
+  font-size:1.6rem;
+  letter-spacing:-.03em;
+}
+
+.success p{
+  max-width:600px;
+  margin:9px auto 24px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.summary{
+  max-width:650px;
+  margin:0 auto 20px;
+  padding:16px;
+  text-align:left;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fbfcfe;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:9px 0;
+  border-bottom:1px solid #edf1f5;
+  font-size:.84rem;
+}
+
+.summary-row:last-child{border-bottom:0}
+
+.summary-row span{color:var(--muted)}
+
+.summary-row strong{text-align:right}
+
+.final-note{
+  max-width:650px;
+  margin:0 auto 20px;
+  padding:13px;
+  border-radius:13px;
+  background:var(--success);
+  color:#166534;
+  font-size:.8rem;
+  line-height:1.5;
+}
+
+.success-actions{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.wa{
+  color:#fff;
+  background:linear-gradient(135deg,var(--green),#22c55e);
+}
+
+.reset{
+  color:#48576a;
+  background:#eef2f7;
+}
+
+/* FOOTER */
+.footer{
+  padding:18px 10px 4px;
+  text-align:center;
+  color:rgba(255,255,255,.65);
+  font-size:.72rem;
+  line-height:1.5;
+}
+
+/* MOBILE */
+@media(max-width:760px){
+  body{padding:12px}
+
+  .hero{padding:24px 20px}
+
+  .hero-top{
+    display:block;
+  }
+
+  .season{
+    display:inline-block;
+    margin-top:16px;
+    text-align:left;
+  }
+
+  .test-info{
+    grid-template-columns:1fr;
+    padding:16px 18px;
+  }
+
+  .club-section{
+    padding:22px 20px;
+  }
+
+  .club-head{
+    display:block;
+  }
+
+  .club-badge{
+    display:inline-block;
+    margin-top:12px;
+  }
+
+  .club-points{
+    grid-template-columns:1fr;
+  }
+
+  .progress-wrap{
+    padding:16px 18px 18px;
+  }
+
+  .form-area{
+    padding:20px;
+  }
+}
+
+@media(max-width:560px){
+  .card{border-radius:22px}
+
+  .hero h1{
+    font-size:1.65rem;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .hero-btn{
+    width:100%;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .choices{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .steps{
+    gap:4px;
+  }
+
+  .step{
+    font-size:.68rem;
+  }
+
+  .step span{
+    width:26px;
+    height:26px;
+    flex-basis:26px;
+  }
+
+  .actions{
+    flex-direction:column-reverse;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .summary-row{
+    flex-direction:column;
+    gap:3px;
+  }
+
+  .summary-row strong{
+    text-align:left;
+  }
+
+  .success{
+    padding:32px 16px 36px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <!-- HERO -->
+    <header class="hero">
+
+      <div class="hero-top">
+
+        <div>
+
+          <div class="brand">
+            <div class="logo">🏐</div>
+
+            <div>
+              <div class="eyebrow">
+                <span class="dot"></span>
+                Inscription aux tests
+              </div>
+            </div>
+          </div>
+
+          <h1>
+            Tests de recrutement Volleyball
+            <br>
+            Saison 2026/2027
+          </h1>
+
+          <p class="hero-description">
+            Le club organise des tests de recrutement pour préparer la saison
+            2026/2027. Remplis le formulaire pour transmettre ton profil
+            et recevoir les informations nécessaires concernant les tests.
+          </p>
+
+          <div class="hero-actions">
+
+            <a class="hero-btn primary" href="#inscription">
+              📝 S'inscrire aux tests
+            </a>
+
+            <a
+              class="hero-btn secondary"
+              id="topWhatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📱 Contacter le club
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="season">
+          SAISON
+          <strong>2026 / 2027</strong>
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- INFORMATIONS TESTS -->
+    <section class="test-info">
+
+      <div class="info-box">
+        <div class="info-icon">📅</div>
+        <div>
+          <small>Date des tests</small>
+          <strong>13/09/2026</strong>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-icon">📍</div>
+        <div>
+          <small>Lieu</small>
+          <strong>Espace sportif SAADIYIN</strong>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-icon">🕐</div>
+        <div>
+          <small>Horaire</small>
+          <strong>À 16h00</strong>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PRESENTATION CLUB -->
+    <section class="club-section">
+
+      <div class="club-head">
+
+        <div>
+          <h2 id="clubName">ADM Volleyball Club</h2>
+
+          <p>
+            Le club invite les joueurs et joueuses intéressés à participer
+            aux tests de recrutement pour la saison 2026/2027.
+            Cette inscription permet à l'équipe d'organisation de préparer
+            les tests et de disposer des informations nécessaires sur les candidats.
+          </p>
+        </div>
+
+        <div class="club-badge">
+          Saison 2026/2027
+        </div>
+
+      </div>
+
+      <div class="club-points">
+
+        <div class="club-point">
+          <strong>🏐 Tests de recrutement</strong>
+          <span>
+            Évaluation des candidats et découverte des profils sportifs.
+          </span>
+        </div>
+
+        <div class="club-point">
+          <strong>📋 Inscription simple</strong>
+          <span>
+            Un formulaire rapide depuis téléphone, tablette ou ordinateur.
+          </span>
+        </div>
+
+        <div class="club-point">
+          <strong>📱 Contact WhatsApp</strong>
+          <span>
+            Envoi des informations au club directement via WhatsApp.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROGRESSION -->
+    <section class="progress-wrap" id="inscription">
+
+      <div class="progress-meta">
+        <span id="progressText">Étape 1 sur 3</span>
+        <span id="progressPercent">33%</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="steps">
+
+        <div class="step active">
+          <span>1</span>
+          Identité
+        </div>
+
+        <div class="step">
+          <span>2</span>
+          Profil sportif
+        </div>
+
+        <div class="step">
+          <span>3</span>
+          Contact
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FORMULAIRE -->
+    <main class="form-area">
+
+      <form id="registrationForm" novalidate>
+
+        <!-- ETAPE 1 -->
+        <section class="panel active" data-panel="1">
+
+          <div class="panel-head">
+            <h2>Informations personnelles</h2>
+            <p>
+              Renseigne les informations nécessaires pour identifier ton dossier.
+            </p>
+          </div>
+
+          <div class="grid">
+
+            <div class="field" data-field>
+
+              <label for="nom">
+                Nom <span class="required">*</span>
+              </label>
+
+              <input
+                id="nom"
+                type="text"
+                autocomplete="family-name"
+                placeholder="Ex. Benali"
+                maxlength="60"
+                required
+              >
+
+              <div class="error">
+                Indique ton nom.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label for="prenom">
+                Prénom <span class="required">*</span>
+              </label>
+
+              <input
+                id="prenom"
+                type="text"
+                autocomplete="given-name"
+                placeholder="Ex. Ahmed"
+                maxlength="60"
+                required
+              >
+
+              <div class="error">
+                Indique ton prénom.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label>
+                Sexe <span class="required">*</span>
+              </label>
+
+              <div class="choices">
+
+                <div class="choice">
+                  <input id="femme" type="radio" name="sexe" value="Femme" required>
+                  <label for="femme">Femme</label>
+                </div>
+
+                <div class="choice">
+                  <input id="homme" type="radio" name="sexe" value="Homme">
+                  <label for="homme">Homme</label>
+                </div>
+
+              </div>
+
+              <div class="error">
+                Choisis une option.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label for="naissance">
+                Date de naissance <span class="required">*</span>
+              </label>
+
+              <input
+                id="naissance"
+                type="date"
+                required
+              >
+
+              <div class="error">
+                Indique une date valide.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label for="taille">
+                Taille (cm) <span class="required">*</span>
+              </label>
+
+              <input
+                id="taille"
+                type="number"
+                min="100"
+                max="250"
+                inputmode="numeric"
+                placeholder="Ex. 185"
+                required
+              >
+
+              <div class="help">
+                Exemple : 185 cm
+              </div>
+
+              <div class="error">
+                Entre une taille comprise entre 100 et 250 cm.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label for="sociale">
+                Situation <span class="required">*</span>
+              </label>
+
+              <select id="sociale" required>
+
+                <option value="">Sélectionner</option>
+                <option>Élève</option>
+                <option>Étudiant</option>
+                <option>Salarié</option>
+                <option>Fonctionnaire</option>
+                <option>Sans emploi</option>
+                <option>Autre</option>
+
+              </select>
+
+              <div class="conditional" id="socialeAutreWrap">
+                <input
+                  id="socialeAutre"
+                  type="text"
+                  placeholder="Précise ta situation"
+                  maxlength="60"
+                >
+              </div>
+
+              <div class="error">
+                Sélectionne une situation.
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="actions">
+
+            <span></span>
+
+            <button class="btn primary" type="button" data-next>
+              Continuer →
+            </button>
+
+          </div>
+
+        </section>
+
+        <!-- ETAPE 2 -->
+        <section class="panel" data-panel="2">
+
+          <div class="panel-head">
+            <h2>Profil sportif</h2>
+            <p>
+              Ces informations permettent au club de mieux préparer les tests.
+            </p>
+          </div>
+
+          <div class="grid">
+
+            <div class="field full" data-field>
+
+              <label>
+                Expérience en Volleyball <span class="required">*</span>
+              </label>
+
+              <div class="choices">
+
+                <div class="choice">
+                  <input
+                    id="exp0"
+                    type="radio"
+                    name="experience"
+                    value="Aucune expérience"
+                    required
+                  >
+                  <label for="exp0">Aucune</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="exp1"
+                    type="radio"
+                    name="experience"
+                    value="Moins d'un an"
+                  >
+                  <label for="exp1">Moins d'1 an</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="exp2"
+                    type="radio"
+                    name="experience"
+                    value="1 à 2 ans"
+                  >
+                  <label for="exp2">1 à 2 ans</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="exp3"
+                    type="radio"
+                    name="experience"
+                    value="3 ans"
+                  >
+                  <label for="exp3">3 ans</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="exp4"
+                    type="radio"
+                    name="experience"
+                    value="Plus de 3 ans"
+                  >
+                  <label for="exp4">+ de 3 ans</label>
+                </div>
+
+              </div>
+
+              <div class="error">
+                Indique ton expérience.
+              </div>
+
+            </div>
+
+            <div class="field full" data-field>
+
+              <label>
+                Niveau de pratique <span class="required">*</span>
+              </label>
+
+              <div class="choices">
+
+                <div class="choice">
+                  <input id="niv1" type="radio" name="niveau" value="1" required>
+                  <label for="niv1">1</label>
+                </div>
+
+                <div class="choice">
+                  <input id="niv2" type="radio" name="niveau" value="2">
+                  <label for="niv2">2</label>
+                </div>
+
+                <div class="choice">
+                  <input id="niv3" type="radio" name="niveau" value="3">
+                  <label for="niv3">3</label>
+                </div>
+
+                <div class="choice">
+                  <input id="niv4" type="radio" name="niveau" value="4">
+                  <label for="niv4">4</label>
+                </div>
+
+                <div class="choice">
+                  <input id="niv5" type="radio" name="niveau" value="5">
+                  <label for="niv5">5</label>
+                </div>
+
+              </div>
+
+              <div class="help">
+                1 = débutant · 5 = très bon niveau
+              </div>
+
+              <div class="error">
+                Choisis ton niveau.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label for="poste">
+                Poste préféré <span class="required">*</span>
+              </label>
+
+              <select id="poste" required>
+
+                <option value="">Sélectionner</option>
+                <option>Passeur</option>
+                <option>Centrale</option>
+                <option>Réceptionneur-attaquant</option>
+                <option>Pointu</option>
+                <option>Libéro</option>
+                <option>Autre</option>
+
+              </select>
+
+              <div class="error">
+                Choisis un poste.
+              </div>
+
+            </div>
+
+            <div class="field" data-field>
+
+              <label>
+                As-tu déjà joué dans un club ?
+                <span class="required">*</span>
+              </label>
+
+              <div class="choices">
+
+                <div class="choice">
+                  <input
+                    id="clubOui"
+                    type="radio"
+                    name="club"
+                    value="Oui"
+                    required
+                  >
+                  <label for="clubOui">Oui</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="clubNon"
+                    type="radio"
+                    name="club"
+                    value="Non"
+                  >
+                  <label for="clubNon">Non</label>
+                </div>
+
+              </div>
+
+              <div class="error">
+                Choisis une option.
+              </div>
+
+            </div>
+
+            <div class="field full conditional" id="clubDetails">
+
+              <label for="clubNom">
+                Nom du club
+              </label>
+
+              <input
+                id="clubNom"
+                type="text"
+                placeholder="Ex. Club Volleyball Fès"
+                maxlength="100"
+              >
+
+              <label>
+                Statut du club
+              </label>
+
+              <div class="choices">
+
+                <div class="choice">
+                  <input
+                    id="clubActuel"
+                    type="radio"
+                    name="clubStatut"
+                    value="Club actuel"
+                  >
+                  <label for="clubActuel">Club actuel</label>
+                </div>
+
+                <div class="choice">
+                  <input
+                    id="clubAncien"
+                    type="radio"
+                    name="clubStatut"
+                    value="Ancien club"
+                  >
+                  <label for="clubAncien">Ancien club</label>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="actions">
+
+            <button class="btn secondary" type="button" data-prev>
+              ← Retour
+            </button>
+
+            <button class="btn primary" type="button" data-next>
+              Continuer →
+            </button>
+
+          </div>
+
+        </section>
+
+        <!-- ETAPE 3 -->
+        <section class="panel" data-panel="3">
+
+          <div class="panel-head">
+            <h2>Informations de contact</h2>
+            <p>
+              Ajoute ton numéro WhatsApp afin que le club puisse te contacter
+              concernant les tests.
+            </p>
+          </div>
+
+          <div class="grid">
+
+            <div class="field full" data-field>
+
+              <label for="telephone">
+                Numéro WhatsApp <span class="required">*</span>
+              </label>
+
+              <input
+                id="telephone"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                placeholder="Ex. 0727666299"
+                maxlength="20"
+                required
+              >
+
+              <div class="help">
+                Le numéro sera utilisé uniquement pour le contact concernant les tests.
+              </div>
+
+              <div class="error">
+                Entre un numéro de téléphone valide.
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="note">
+            <span>🔒</span>
+            <span>
+              Vérifie tes informations avant validation. Cette version ne possède
+              pas encore de base de données : l'inscription sera préparée puis
+              envoyée au club via WhatsApp.
+            </span>
+          </div>
+
+          <div class="actions">
+
+            <button class="btn secondary" type="button" data-prev>
+              ← Retour
+            </button>
+
+            <button class="btn submit" type="submit">
+              ✓ Vérifier mon inscription
+            </button>
+
+          </div>
+
+        </section>
+
+      </form>
+
+      <!-- CONFIRMATION -->
+      <section class="success" id="success">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Vos informations sont prêtes</h2>
+
+        <p>
+          Vérifie le résumé ci-dessous puis envoie ton inscription au club
+          via WhatsApp pour finaliser la prise de contact.
+        </p>
+
+        <div class="summary" id="summary"></div>
+
+        <div class="final-note">
+          📱 Clique sur « Envoyer sur WhatsApp » pour transmettre automatiquement
+          ton message au numéro officiel du club.
+        </div>
+
+        <div class="success-actions">
+
+          <a
+            class="btn wa"
+            id="whatsappLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📱 Envoyer sur WhatsApp
+          </a>
+
+          <button
+            class="btn reset"
+            type="button"
+            id="resetBtn"
+          >
+            Nouvelle inscription
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <div class="footer">
+    <div>
+      ADM Volleyball Club · Tests de recrutement · Saison 2026/2027
+    </div>
+    <div>
+      Les informations demandées sont limitées aux besoins de l'inscription.
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+const CLUB_NAME = "ADM Volleyball Club";
+
+/*
+  IMPORTANT:
+  WhatsApp wa.me requires the international number.
+  Morocco:
+  0727666299  → 212727666299
+*/
+const CLUB_WHATSAPP = "212727666299";
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+const form = document.getElementById("registrationForm");
+const success = document.getElementById("success");
+
+const panels = [...document.querySelectorAll(".panel")];
+const steps = [...document.querySelectorAll(".step")];
+
+const progressBar = document.getElementById("progressBar");
+const progressText = document.getElementById("progressText");
+const progressPercent = document.getElementById("progressPercent");
+
+const naissance = document.getElementById("naissance");
+const sociale = document.getElementById("sociale");
+const socialeAutre = document.getElementById("socialeAutre");
+const socialeAutreWrap = document.getElementById("socialeAutreWrap");
+
+const clubOui = document.getElementById("clubOui");
+const clubNon = document.getElementById("clubNon");
+const clubDetails = document.getElementById("clubDetails");
+const clubNom = document.getElementById("clubNom");
+
+const currentClub = document.getElementById("clubActuel");
+const oldClub = document.getElementById("clubAncien");
+
+const whatsappLink = document.getElementById("whatsappLink");
+const topWhatsapp = document.getElementById("topWhatsapp");
+
+let currentStep = 1;
+
+/* =========================================================
+   INITIALISATION
+   ========================================================= */
+
+document.getElementById("clubName").textContent = CLUB_NAME;
+
+const today = new Date();
+naissance.max = today.toISOString().split("T")[0];
+
+/* Top WhatsApp button */
+topWhatsapp.href = `https://wa.me/${CLUB_WHATSAPP}`;
+
+/* =========================================================
+   UTILITAIRES
+   ========================================================= */
+
+function groupChecked(name){
+  return form.querySelector(`input[name="${name}"]:checked`);
+}
+
+function showStep(step){
+
+  currentStep = step;
+
+  panels.forEach(panel => {
+    panel.classList.toggle(
+      "active",
+      Number(panel.dataset.panel) === step
+    );
+  });
+
+  steps.forEach((stepEl,index) => {
+
+    const number = index + 1;
+
+    stepEl.classList.toggle(
+      "active",
+      number === step
+    );
+
+    stepEl.classList.toggle(
+      "done",
+      number < step
+    );
+
+  });
+
+  const percent = Math.round((step / 3) * 100);
+
+  progressBar.style.width = `${percent}%`;
+  progressText.textContent = `Étape ${step} sur 3`;
+  progressPercent.textContent = `${percent}%`;
+
+  document
+    .querySelector(".card")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+}
+
+function markField(field,valid){
+
+  field.classList.toggle(
+    "has-error",
+    !valid
+  );
+
+  const control =
+    field.querySelector("input,select");
+
+  if(
+    control &&
+    control.type !== "radio"
+  ){
+    control.classList.toggle(
+      "invalid",
+      !valid
+    );
+  }
+
+  return valid;
+}
+
+function validatePanel(panel){
+
+  let validPanel = true;
+
+  panel
+    .querySelectorAll("[data-field]")
+    .forEach(field => {
+
+      const required =
+        field.querySelector(
+          "input[required],select[required]"
+        );
+
+      if(!required) return;
+
+      let valid = true;
+
+      if(required.type === "radio"){
+
+        valid =
+          !!groupChecked(required.name);
+
+      }else{
+
+        valid =
+          required.checkValidity() &&
+          required.value.trim() !== "";
+
+      }
+
+      if(required.id === "telephone" && valid){
+
+        const digits =
+          required.value.replace(/\D/g,"");
+
+        valid =
+          digits.length >= 9 &&
+          digits.length <= 15;
+      }
+
+      markField(field,valid);
+
+      if(!valid){
+        validPanel = false;
+      }
+
+    });
+
+  /* Situation autre */
+
+  if(sociale.value === "Autre"){
+
+    const valid =
+      socialeAutre.value.trim() !== "";
+
+    socialeAutre.classList.toggle(
+      "invalid",
+      !valid
+    );
+
+    if(!valid){
+      validPanel = false;
+    }
+  }
+
+  /* Club */
+
+  if(clubOui.checked){
+
+    const clubValid =
+      clubNom.value.trim() !== "";
+
+    clubNom.classList.toggle(
+      "invalid",
+      !clubValid
+    );
+
+    if(!clubValid){
+      validPanel = false;
+    }
+
+    const statusValid =
+      !!groupChecked("clubStatut");
+
+    if(!statusValid){
+      validPanel = false;
+    }
+  }
+
+  return validPanel;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+document
+  .querySelectorAll("[data-next]")
+  .forEach(button => {
+
+    button.addEventListener("click",() => {
+
+      const panel =
+        panels.find(
+          p => Number(p.dataset.panel) === currentStep
+        );
+
+      if(validatePanel(panel)){
+        showStep(
+          Math.min(
+            3,
+            currentStep + 1
+          )
+        );
+      }
+
+    });
+
+  });
+
+document
+  .querySelectorAll("[data-prev]")
+  .forEach(button => {
+
+    button.addEventListener("click",() => {
+
+      showStep(
+        Math.max(
+          1,
+          currentStep - 1
+        )
+      );
+
+    });
+
+  });
+
+/* =========================================================
+   CONDITIONAL FIELDS
+   ========================================================= */
+
+/* Situation */
+
+sociale.addEventListener("change",() => {
+
+  const show =
+    sociale.value === "Autre";
+
+  socialeAutreWrap.classList.toggle(
+    "show",
+    show
+  );
+
+  socialeAutre.required = show;
+
+  if(!show){
+
+    socialeAutre.value = "";
+    socialeAutre.classList.remove("invalid");
+
+  }
+
+});
+
+/* Club */
+
+[clubOui,clubNon].forEach(radio => {
+
+  radio.addEventListener("change",() => {
+
+    const show = clubOui.checked;
+
+    clubDetails.classList.toggle(
+      "show",
+      show
+    );
+
+    clubNom.required = show;
+
+    if(!show){
+
+      clubNom.value = "";
+      clubNom.required = false;
+      clubNom.classList.remove("invalid");
+
+      if(currentClub){
+        currentClub.checked = false;
+      }
+
+      if(oldClub){
+        oldClub.checked = false;
+      }
+
+    }
+
+  });
+
+});
+
+/* =========================================================
+   REMOVE ERROR WHEN USER CORRECTS FIELD
+   ========================================================= */
+
+form.addEventListener("input",event => {
+
+  const field =
+    event.target.closest("[data-field]");
+
+  if(field){
+
+    field.classList.remove("has-error");
+
+    if(event.target.value){
+      event.target.classList.remove("invalid");
+    }
+
+  }
+
+});
+
+form.addEventListener("change",event => {
+
+  const field =
+    event.target.closest("[data-field]");
+
+  if(field){
+    field.classList.remove("has-error");
+  }
+
+});
+
+/* =========================================================
+   DATA
+   ========================================================= */
+
+function checkedValue(name){
+
+  return groupChecked(name)?.value || "";
+}
+
+function getData(){
+
+  return {
+
+    nom:
+      document
+        .getElementById("nom")
+        .value
+        .trim(),
+
+    prenom:
+      document
+        .getElementById("prenom")
+        .value
+        .trim(),
+
+    sexe:
+      checkedValue("sexe"),
+
+    naissance:
+      naissance.value,
+
+    taille:
+      document
+        .getElementById("taille")
+        .value
+        .trim(),
+
+    sociale:
+      sociale.value === "Autre"
+        ? socialeAutre.value.trim()
+        : sociale.value,
+
+    experience:
+      checkedValue("experience"),
+
+    niveau:
+      checkedValue("niveau"),
+
+    poste:
+      document
+        .getElementById("poste")
+        .value,
+
+    club:
+      clubOui.checked
+        ? clubNom.value.trim()
+        : "Aucun",
+
+    clubStatut:
+      clubOui.checked
+        ? checkedValue("clubStatut")
+        : "",
+
+    telephone:
+      document
+        .getElementById("telephone")
+        .value
+        .trim()
+
+  };
+
+}
+
+/* =========================================================
+   FORMATTING
+   ========================================================= */
+
+function displayDate(value){
+
+  if(!value) return "";
+
+  const date =
+    new Date(
+      value + "T00:00:00"
+    );
+
+  return date.toLocaleDateString(
+    "fr-FR",
+    {
+      day:"2-digit",
+      month:"2-digit",
+      year:"numeric"
+    }
+  );
+}
+
+function escapeHtml(value){
+
+  return String(value).replace(
+    /[&<>"']/g,
+    char => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#039;"
+    }[char])
+  );
+
+}
+
+function row(label,value){
+
+  return `
+    <div class="summary-row">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+    </div>
+  `;
+
+}
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+form.addEventListener("submit",event => {
+
+  event.preventDefault();
+
+  const finalPanel =
+    panels.find(
+      p => Number(p.dataset.panel) === 3
+    );
+
+  if(!validatePanel(finalPanel)){
+    return;
+  }
+
+  const data = getData();
+
+  const message =
+`Bonjour,
+
+Je souhaite confirmer mon inscription aux tests de recrutement de ${CLUB_NAME} pour la saison 2026/2027.
+
+Informations du candidat :
+
+Nom : ${data.nom}
+Prénom : ${data.prenom}
+Sexe : ${data.sexe}
+Date de naissance : ${displayDate(data.naissance)}
+Taille : ${data.taille} cm
+Situation : ${data.sociale}
+
+Profil sportif :
+Expérience : ${data.experience}
+Niveau : ${data.niveau}/5
+Poste préféré : ${data.poste}
+Club : ${data.club}${data.clubStatut ? ` (${data.clubStatut})` : ""}
+
+Numéro WhatsApp : ${data.telephone}
+
+Merci.`;
+
+  /* Résumé */
+
+  document.getElementById("summary").innerHTML =
+
+    row("Nom",data.nom) +
+
+    row("Prénom",data.prenom) +
+
+    row("Sexe",data.sexe) +
+
+    row(
+      "Date de naissance",
+      displayDate(data.naissance)
+    ) +
+
+    row(
+      "Taille",
+      `${data.taille} cm`
+    ) +
+
+    row(
+      "Situation",
+      data.sociale
+    ) +
+
+    row(
+      "Expérience",
+      data.experience
+    ) +
+
+    row(
+      "Niveau",
+      `${data.niveau}/5`
+    ) +
+
+    row(
+      "Poste",
+      data.poste
+    ) +
+
+    row(
+      "Club",
+      data.club
+    ) +
+
+    (data.clubStatut
+      ? row(
+          "Statut",
+          data.clubStatut
+        )
+      : "") +
+
+    row(
+      "WhatsApp",
+      data.telephone
+    );
+
+  /* WhatsApp */
+
+  const url =
+    `https://wa.me/${CLUB_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+  whatsappLink.href = url;
+
+  /* Affichage confirmation */
+
+  form.style.display = "none";
+
+  document
+    .querySelector(".progress-wrap")
+    .style.display = "none";
+
+  success.classList.add("active");
+
+  success.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+
+});
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+document
+  .getElementById("resetBtn")
+  .addEventListener("click",() => {
+
+    form.reset();
+
+    document
+      .querySelectorAll(
+        ".has-error,.invalid"
+      )
+      .forEach(element => {
+
+        element.classList.remove(
+          "has-error",
+          "invalid"
+        );
+
+      });
+
+    socialeAutreWrap.classList.remove("show");
+
+    clubDetails.classList.remove("show");
+
+    socialeAutre.required = false;
+
+    clubNom.required = false;
+
+    clubNom.classList.remove("invalid");
+
+    success.classList.remove("active");
+
+    form.style.display = "";
+
+    document
+      .querySelector(".progress-wrap")
+      .style.display = "";
+
+    showStep(1);
+
+  });
+
+</script>
+
+</body>
+</html>
+```
